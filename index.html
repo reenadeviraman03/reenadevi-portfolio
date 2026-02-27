@@ -1,310 +1,348 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Reena Devi | Data Analyst</title>
+<title>Reena Devi | Data Analyst Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-    background: linear-gradient(to right, #14001f, #1f0036);
-    color:white;
+    background: linear-gradient(135deg,#14001f,#2b0057,#3c007a);
+    color:#fff;
 }
 
 /* NAVBAR */
 nav{
     display:flex;
     justify-content:space-between;
-    align-items:center;
     padding:20px 8%;
-    background:#1a0033;
+    background:rgba(0,0,0,0.4);
     position:sticky;
     top:0;
+    z-index:1000;
 }
 
-nav h2{ font-weight:700; }
+nav h2{
+    font-weight:700;
+    color:#ff4bff;
+}
 
 nav ul{
-    list-style:none;
     display:flex;
-    flex-wrap:wrap;
+    gap:30px;
+    list-style:none;
 }
-
-nav ul li{ margin-left:25px; }
 
 nav ul li a{
     text-decoration:none;
-    color:#c084fc;
+    color:#fff;
     font-weight:500;
-    transition:0.3s;
 }
 
-nav ul li a:hover{ color:white; }
-
-/* HERO */
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:80px 8%;
-    flex-wrap:wrap;
-}
-
-.hero-text{
-    flex:1;
-    min-width:280px;
-}
-
-.hero-text h1{
-    font-size:40px;
-    margin-bottom:20px;
-}
-
-.hero-text span{ color:#c084fc; }
-
-.hero-text p{
-    line-height:1.7;
-    margin-bottom:25px;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 25px;
-    background:linear-gradient(45deg,#a855f7,#7e22ce);
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:500;
-    transition:0.3s;
-}
-
-.btn:hover{ transform:scale(1.05); }
-
-.hero-img{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    min-width:280px;
-    margin-top:30px;
-}
-
-.hero-img img{
-    width:320px;
-    height:320px;
-    border-radius:50%;
-    object-fit:cover;
-    border:6px solid #a855f7;
+nav ul li a:hover{
+    color:#ff4bff;
 }
 
 /* SECTION */
-section{ padding:70px 8%; }
-
-section h2{
-    text-align:center;
-    margin-bottom:40px;
-    color:#c084fc;
+section{
+    padding:70px 8%;
 }
 
-/* GRID */
-.grid{
+/* HOME */
+.home{
+    text-align:center;
+}
+
+.home img{
+    width:170px;
+    border-radius:50%;
+    border:4px solid #ff4bff;
+    margin-bottom:20px;
+}
+
+.home h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.home p{
+    color:#ddd;
+}
+
+/* SKILLS */
+#skills h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.skills-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:30px;
+}
+
+.skill-card{
+    background:linear-gradient(145deg,#1c0033,#2b0057);
+    padding:35px 20px;
+    text-align:center;
+    border-radius:20px;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 25px #ff4bff;
+}
+
+.skill-card img{
+    width:55px;
+    margin-bottom:15px;
+}
+
+/* EXPERIENCE */
+#experience{
+    text-align:center;
+}
+
+.experience-card{
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
+    margin-top:30px;
+}
+
+.experience-card img{
+    width:300px;
+    max-width:100%;
+    margin-top:15px;
+    border-radius:10px;
+}
+
+/* EDUCATION */
+#education{
+    text-align:center;
+}
+
+/* PROJECTS */
+.projects-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
-}
-
-.card{
-    background:#22003d;
-    padding:20px;
-    border-radius:12px;
-    transition:0.3s;
-}
-
-.card:hover{ transform:translateY(-5px); }
-
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-    border-radius:8px;
-    margin:15px 0;
-}
-
-.card p{
-    font-size:14px;
-    margin-top:10px;
-    line-height:1.6;
-}
-
-.certificate img{
-    height:auto;
-    max-height:300px;
-    object-fit:contain;
-}
-
-.contact-links a{
-    display:block;
-    margin-bottom:12px;
-    color:#c084fc;
-    text-decoration:none;
-    font-weight:500;
-}
-
-.contact-links a:hover{ color:white; }
-
-footer{
-    text-align:center;
-    padding:20px;
-    background:#1a0033;
     margin-top:40px;
 }
 
-/* MOBILE */
+.project-card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    box-shadow:0 0 20px #ff4bff;
+    transform:translateY(-5px);
+}
+
+.project-card img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+.project-card h3{
+    color:#ff4bff;
+    margin-bottom:10px;
+}
+
+.project-card p{
+    font-size:14px;
+    color:#ddd;
+}
+
+/* CERTIFICATIONS */
+.certificates-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:40px;
+}
+
+.certificate-card{
+    background:rgba(255,255,255,0.05);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.certificate-card img{
+    width:100%;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact a{
+    display:block;
+    margin:10px 0;
+    color:#fff;
+    text-decoration:none;
+}
+
+.contact a:hover{
+    color:#ff4bff;
+}
+
+/* RESPONSIVE */
 @media(max-width:768px){
-    .hero{
-        flex-direction:column;
-        text-align:center;
+    nav ul{
+        display:none;
     }
-    .hero-img img{
-        width:250px;
-        height:250px;
+    .home h1{
+        font-size:28px;
     }
 }
+
 </style>
 </head>
-
 <body>
 
 <nav>
-    <h2>Reena Devi</h2>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#internship">Internship</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+<h2>Reena Devi</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
-<div class="hero">
-    <div class="hero-text">
-        <h1>Hello! I'm <span>Reena Devi</span></h1>
-        <p>
-            MSc Computer Science graduate and aspiring Data Analyst skilled in SQL, Power BI, Excel, and Python. 
-            Passionate about transforming raw data into meaningful insights and building dashboards that drive business decisions.
-        </p>
-        <a href="pictures/files/ReenaDevi_Resume.pdf" target="_blank" class="btn">View Resume</a>
-    </div>
-
-    <div class="hero-img">
-        <img src="pictures/profile.jpg" alt="Profile Photo">
-    </div>
-</div>
-
-<section id="education">
-    <h2>Education</h2>
-    <div class="grid">
-        <div class="card">
-            <h3>MSc Computer Science</h3>
-            <p>Mother Teresa Arts and Science College (2023 – 2025)</p>
-        </div>
-        <div class="card">
-            <h3>BCA</h3>
-            <p>Mother Teresa Arts and Science College (2020 – 2023)</p>
-        </div>
-    </div>
+<section id="home" class="home">
+<img src="pictures/profile.jpg" alt="Profile Photo">
+<h1>Hi, I'm Reena Devi</h1>
+<p>Data Analyst | Power BI | SQL | Python | Excel</p>
 </section>
 
-<section id="internship">
-    <h2>Data Analyst Intern</h2>
-    <div class="grid">
-        <div class="card certificate">
-            <h3>Novi Tech Pvt Ltd</h3>
-            <p><strong>Duration:</strong> Dec 2025 – Dec 2026</p>
-            <p>Worked on SQL queries, cleaned large datasets, created KPI reports, and built Power BI dashboards to analyze business performance.</p>
-            <img src="pictures/certificates/internship.png" alt="Internship Certificate">
-        </div>
-    </div>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills-container">
+<div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png"><h4>Python</h4></div>
+<div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/4248/4248443.png"><h4>SQL</h4></div>
+<div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png"><h4>Power BI</h4></div>
+<div class="skill-card"><img src="https://cdn-icons-png.flaticon.com/512/732/732220.png"><h4>Advanced Excel</h4></div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="experience-card">
+<h3>Novi Tech Pvt Ltd</h3>
+<p>Data Analyst Intern (Dec 2025 – Dec 2026)</p>
+<p>Worked on data cleaning, SQL queries, KPI analysis and built Power BI dashboards for business performance tracking.</p>
+<img src="pictures/certificates/internship.png" alt="Internship Certificate">
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<p><strong>MSc Computer Science</strong> – Mother Terasa Arts and Science (2025)</p>
+<p><strong>BCA</strong> – Mother Terasa Arts and Science</p>
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
+<h2>Projects</h2>
+<div class="projects-container">
 
-        <div class="card">
-            <h3>Covid Analysis</h3>
-            <img src="pictures/projects/project1.png">
-            <p>Analyzed country-wise COVID-19 data using Python and Pandas to identify trends and visualize case growth patterns.</p>
-            <a href="https://github.com/reenadeviraman03/CovidAnalysis" target="_blank" class="btn">View Project</a>
-        </div>
+<div class="project-card">
+<img src="pictures/projects/project1.png">
+<h3>Covid Analysis</h3>
+<p>Country-wise COVID data analysis using Python & Pandas with trend visualization.</p>
+</div>
 
-        <div class="card">
-            <h3>Meta Ads Dashboard</h3>
-            <img src="pictures/projects/project2.png">
-            <p>Built Power BI dashboard to evaluate ad performance metrics like CTR, CPC, conversions and ROI.</p>
-            <a href="https://github.com/reenadeviraman03/meta-ads-performance-powerbi" target="_blank" class="btn">View Project</a>
-        </div>
+<div class="project-card">
+<img src="pictures/projects/project2.png">
+<h3>Meta Ads Performance Dashboard</h3>
+<p>Analyzed campaign KPIs and optimized ad performance using Power BI.</p>
+</div>
 
-        <div class="card">
-            <h3>Sales Dashboard</h3>
-            <img src="pictures/projects/project3.png">
-            <p>Developed interactive dashboard to analyze revenue, profit, customer segments and sales trends.</p>
-            <a href="https://github.com/reenadeviraman03/sales-performance-dashboard" target="_blank" class="btn">View Project</a>
-        </div>
+<div class="project-card">
+<img src="pictures/projects/project3.png">
+<h3>Sales Performance Dashboard</h3>
+<p>Revenue and profit analysis with interactive Power BI dashboard.</p>
+</div>
 
-        <div class="card">
-            <h3>Pizza Sales SQL</h3>
-            <img src="pictures/projects/project4.png">
-            <p>Performed SQL analysis to calculate KPIs and visualized results using Power BI.</p>
-            <a href="https://github.com/reenadeviraman03/pizza-sales-sql-powerbi-dashboard" target="_blank" class="btn">View Project</a>
-        </div>
+<div class="project-card">
+<img src="pictures/projects/project4.png">
+<h3>Pizza Sales SQL + Power BI</h3>
+<p>End-to-end sales analysis using PostgreSQL and dashboard visualization.</p>
+</div>
 
-        <div class="card">
-            <h3>Blinkit Sales Analysis</h3>
-            <img src="pictures/projects/project5.png">
-            <p>Cleaned sales data using PostgreSQL and created dashboards for performance evaluation.</p>
-            <a href="https://github.com/reenadeviraman03/blinkit-sales-analysis-powerbi-sql" target="_blank" class="btn">View Project</a>
-        </div>
+<div class="project-card">
+<img src="pictures/projects/project5.png">
+<h3>Blinkit Sales Analysis</h3>
+<p>Cleaned and analyzed sales data using SQL & Power BI.</p>
+</div>
 
-    </div>
+</div>
 </section>
 
-<section id="certificates">
-    <h2>Course Certificates</h2>
-    <div class="grid">
-        <div class="card certificate">
-            <h3>Data Analysis</h3>
-            <img src="pictures/certificates/data-analysis.png">
-        </div>
-        <div class="card certificate">
-            <h3>Python for Data Science</h3>
-            <img src="pictures/certificates/python.png">
-        </div>
-    </div>
+<section id="certifications">
+<h2>Certifications</h2>
+<div class="certificates-container">
+
+<div class="certificate-card">
+<h3>Data Analysis Certificate</h3>
+<img src="pictures/certificates/data-analysis.png">
+</div>
+
+<div class="certificate-card">
+<h3>Python for Data Science</h3>
+<img src="pictures/certificates/python.png">
+</div>
+
+</div>
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="card contact-links">
-        <a href="mailto:reenadeviraman03@gmail.com">📧 Email: reenadeviraman03@gmail.com</a>
-        <a href="tel:+918438594737">📞 Phone: +91 8438594737</a>
-        <a href="https://www.linkedin.com/in/reenadevi-s03" target="_blank">🔗 LinkedIn Profile</a>
-    </div>
+<section id="contact" class="contact">
+<h2>Contact Me</h2>
+<a href="mailto:reenadeviraman03@gmail.com">📧 reenadeviraman03@gmail.com</a>
+<a href="tel:+918438594737">📞 +91 8438594737</a>
+<a href="https://www.linkedin.com/in/reenadevi-s03" target="_blank">🔗 LinkedIn Profile</a>
 </section>
-
-<footer>
-    © 2026 Reena Devi | Data Analyst Portfolio
-</footer>
 
 </body>
 </html>
+    
+    
+
+
+
+
+    
+   
+   
+
+
+       
+
+        
+
+
+  

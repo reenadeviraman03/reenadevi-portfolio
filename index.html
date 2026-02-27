@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -32,9 +32,7 @@ nav{
     top:0;
 }
 
-nav h2{
-    font-weight:700;
-}
+nav h2{ font-weight:700; }
 
 nav ul{
     list-style:none;
@@ -42,9 +40,7 @@ nav ul{
     flex-wrap:wrap;
 }
 
-nav ul li{
-    margin-left:25px;
-}
+nav ul li{ margin-left:25px; }
 
 nav ul li a{
     text-decoration:none;
@@ -53,9 +49,7 @@ nav ul li a{
     transition:0.3s;
 }
 
-nav ul li a:hover{
-    color:white;
-}
+nav ul li a:hover{ color:white; }
 
 /* HERO */
 .hero{
@@ -76,9 +70,7 @@ nav ul li a:hover{
     margin-bottom:20px;
 }
 
-.hero-text span{
-    color:#c084fc;
-}
+.hero-text span{ color:#c084fc; }
 
 .hero-text p{
     line-height:1.7;
@@ -96,9 +88,7 @@ nav ul li a:hover{
     transition:0.3s;
 }
 
-.btn:hover{
-    transform:scale(1.05);
-}
+.btn:hover{ transform:scale(1.05); }
 
 .hero-img{
     flex:1;
@@ -117,9 +107,7 @@ nav ul li a:hover{
 }
 
 /* SECTION */
-section{
-    padding:70px 8%;
-}
+section{ padding:70px 8%; }
 
 section h2{
     text-align:center;
@@ -141,16 +129,20 @@ section h2{
     transition:0.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
-}
+.card:hover{ transform:translateY(-5px); }
 
 .card img{
     width:100%;
     height:200px;
     object-fit:cover;
     border-radius:8px;
+    margin:15px 0;
+}
+
+.card p{
+    font-size:14px;
     margin-top:10px;
+    line-height:1.6;
 }
 
 .certificate img{
@@ -158,6 +150,16 @@ section h2{
     max-height:300px;
     object-fit:contain;
 }
+
+.contact-links a{
+    display:block;
+    margin-bottom:12px;
+    color:#c084fc;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.contact-links a:hover{ color:white; }
 
 footer{
     text-align:center;
@@ -172,28 +174,16 @@ footer{
         flex-direction:column;
         text-align:center;
     }
-
     .hero-img img{
         width:250px;
         height:250px;
     }
-
-    nav ul{
-        justify-content:center;
-        margin-top:10px;
-    }
-
-    nav ul li{
-        margin:10px;
-    }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
     <h2>Reena Devi</h2>
     <ul>
@@ -206,14 +196,12 @@ footer{
     </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero">
     <div class="hero-text">
         <h1>Hello! I'm <span>Reena Devi</span></h1>
         <p>
             MSc Computer Science graduate and aspiring Data Analyst skilled in SQL, Power BI, Excel, and Python. 
-            Passionate about transforming raw data into meaningful insights and building interactive dashboards 
-            to support data-driven decision making.
+            Passionate about transforming raw data into meaningful insights and building dashboards that drive business decisions.
         </p>
         <a href="pictures/files/ReenaDevi_Resume.pdf" target="_blank" class="btn">View Resume</a>
     </div>
@@ -223,36 +211,32 @@ footer{
     </div>
 </div>
 
-<!-- EDUCATION -->
 <section id="education">
     <h2>Education</h2>
     <div class="grid">
         <div class="card">
             <h3>MSc Computer Science</h3>
-            <p>Mother Teresa Arts and Science College</p>
-            <p>2023 – 2025</p>
+            <p>Mother Teresa Arts and Science College (2023 – 2025)</p>
         </div>
-
         <div class="card">
             <h3>BCA</h3>
-            <p>Mother Teresa Arts and Science College</p>
-            <p>2020 – 2023</p>
+            <p>Mother Teresa Arts and Science College (2020 – 2023)</p>
         </div>
     </div>
 </section>
 
-<!-- INTERNSHIP -->
 <section id="internship">
-    <h2>Data Analyst Internship</h2>
+    <h2>Data Analyst Intern</h2>
     <div class="grid">
         <div class="card certificate">
-            <p>Worked on SQL queries, data cleaning, KPI analysis, and Power BI dashboards.</p>
+            <h3>Novi Tech Pvt Ltd</h3>
+            <p><strong>Duration:</strong> Dec 2025 – Dec 2026</p>
+            <p>Worked on SQL queries, cleaned large datasets, created KPI reports, and built Power BI dashboards to analyze business performance.</p>
             <img src="pictures/certificates/internship.png" alt="Internship Certificate">
         </div>
     </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
@@ -260,61 +244,61 @@ footer{
         <div class="card">
             <h3>Covid Analysis</h3>
             <img src="pictures/projects/project1.png">
-            <a href="https://github.com/reenadeviraman03/CovidAnalysis" target="_blank" class="btn">GitHub</a>
+            <p>Analyzed country-wise COVID-19 data using Python and Pandas to identify trends and visualize case growth patterns.</p>
+            <a href="https://github.com/reenadeviraman03/CovidAnalysis" target="_blank" class="btn">View Project</a>
         </div>
 
         <div class="card">
-            <h3>Meta Ads Performance</h3>
+            <h3>Meta Ads Dashboard</h3>
             <img src="pictures/projects/project2.png">
-            <a href="https://github.com/reenadeviraman03/meta-ads-performance-powerbi" target="_blank" class="btn">GitHub</a>
+            <p>Built Power BI dashboard to evaluate ad performance metrics like CTR, CPC, conversions and ROI.</p>
+            <a href="https://github.com/reenadeviraman03/meta-ads-performance-powerbi" target="_blank" class="btn">View Project</a>
         </div>
 
         <div class="card">
             <h3>Sales Dashboard</h3>
             <img src="pictures/projects/project3.png">
-            <a href="https://github.com/reenadeviraman03/sales-performance-dashboard" target="_blank" class="btn">GitHub</a>
+            <p>Developed interactive dashboard to analyze revenue, profit, customer segments and sales trends.</p>
+            <a href="https://github.com/reenadeviraman03/sales-performance-dashboard" target="_blank" class="btn">View Project</a>
         </div>
 
         <div class="card">
             <h3>Pizza Sales SQL</h3>
             <img src="pictures/projects/project4.png">
-            <a href="https://github.com/reenadeviraman03/pizza-sales-sql-powerbi-dashboard" target="_blank" class="btn">GitHub</a>
+            <p>Performed SQL analysis to calculate KPIs and visualized results using Power BI.</p>
+            <a href="https://github.com/reenadeviraman03/pizza-sales-sql-powerbi-dashboard" target="_blank" class="btn">View Project</a>
         </div>
 
         <div class="card">
             <h3>Blinkit Sales Analysis</h3>
             <img src="pictures/projects/project5.png">
-            <a href="https://github.com/reenadeviraman03/blinkit-sales-analysis-powerbi-sql" target="_blank" class="btn">GitHub</a>
+            <p>Cleaned sales data using PostgreSQL and created dashboards for performance evaluation.</p>
+            <a href="https://github.com/reenadeviraman03/blinkit-sales-analysis-powerbi-sql" target="_blank" class="btn">View Project</a>
         </div>
 
     </div>
 </section>
 
-<!-- CERTIFICATES -->
 <section id="certificates">
     <h2>Course Certificates</h2>
     <div class="grid">
-
         <div class="card certificate">
             <h3>Data Analysis</h3>
             <img src="pictures/certificates/data-analysis.png">
         </div>
-
         <div class="card certificate">
             <h3>Python for Data Science</h3>
             <img src="pictures/certificates/python.png">
         </div>
-
     </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
-    <div class="card">
-        <p>Email: reenadeviraman03@gmail.com</p>
-        <p>LinkedIn: linkedin.com/in/reenadevi-s03</p>
-        <p>Phone: +91-8438594737</p>
+    <div class="card contact-links">
+        <a href="mailto:reenadeviraman03@gmail.com">📧 Email: reenadeviraman03@gmail.com</a>
+        <a href="tel:+918438594737">📞 Phone: +91 8438594737</a>
+        <a href="https://www.linkedin.com/in/reenadevi-s03" target="_blank">🔗 LinkedIn Profile</a>
     </div>
 </section>
 

@@ -11,20 +11,20 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
 }
 
 body{
-    background: linear-gradient(to right, #eef2f3, #dfe9f3);
-    color:#333;
+    background: linear-gradient(135deg,#1b0033,#3a0ca3,#240046);
+    color:#f1f1f1;
     scroll-behavior:smooth;
 }
 
+/* HEADER */
+
 header{
     text-align:center;
-    padding:60px 20px;
-    background: linear-gradient(135deg,#11998e,#38ef7d);
-    color:white;
+    padding:70px 20px;
 }
 
 header img{
@@ -32,13 +32,14 @@ header img{
     height:160px;
     object-fit:cover;
     border-radius:50%;
-    border:4px solid white;
+    border:4px solid #ff4ecd;
+    box-shadow:0 0 25px rgba(255,78,205,0.6);
     margin-bottom:15px;
 }
 
 header h1{
-    font-size:36px;
-    margin-bottom:5px;
+    font-size:38px;
+    letter-spacing:1px;
 }
 
 header p{
@@ -49,70 +50,76 @@ header p{
 .resume-btn{
     display:inline-block;
     margin-top:20px;
-    padding:10px 25px;
-    background:white;
-    color:#11998e;
-    border-radius:25px;
+    padding:12px 28px;
+    background:#ff4ecd;
+    color:white;
+    border-radius:30px;
     text-decoration:none;
     font-weight:bold;
     transition:0.3s;
 }
 
 .resume-btn:hover{
-    background:#f1f1f1;
+    background:#ff2bbf;
     transform:scale(1.05);
 }
 
+/* SECTION */
+
 section{
-    padding:70px 10%;
+    padding:80px 10%;
     text-align:center;
 }
 
 h2{
-    font-size:28px;
+    font-size:30px;
     margin-bottom:40px;
-    color:#11998e;
+    color:#ff4ecd;
 }
 
 .about{
-    max-width:700px;
+    max-width:750px;
     margin:auto;
-    font-size:17px;
-    line-height:1.6;
+    font-size:18px;
+    line-height:1.7;
 }
+
+/* CARDS */
 
 .cards{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:25px;
+    gap:30px;
 }
 
 .card{
-    background:white;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
     width:320px;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
     transition:0.3s;
 }
 
 .card:hover{
     transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(255,78,205,0.4);
 }
 
 .card img{
     width:100%;
-    height:180px;
+    height:190px;
     object-fit:cover;
-    border-radius:10px;
-    margin:10px 0;
+    border-radius:12px;
+    margin:15px 0;
 }
 
 .card a{
     display:inline-block;
     margin-top:10px;
-    color:#11998e;
+    color:#ff4ecd;
     font-weight:bold;
     text-decoration:none;
 }
@@ -121,33 +128,40 @@ h2{
     text-decoration:underline;
 }
 
+/* INTERNSHIP */
+
 .internship{
-    background:white;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
     padding:40px;
     border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.1);
-    max-width:600px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.4);
+    max-width:650px;
     margin:auto;
 }
 
 .internship img{
     width:350px;
     margin-top:20px;
-    border-radius:10px;
+    border-radius:12px;
 }
+
+/* CONTACT */
 
 .contact p{
     margin:10px 0;
-    font-size:16px;
+    font-size:17px;
 }
 
 footer{
     text-align:center;
     padding:20px;
-    background:#11998e;
-    color:white;
-    margin-top:40px;
+    background:#12002b;
+    margin-top:50px;
+    color:#ff4ecd;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
     .cards{
@@ -172,9 +186,9 @@ footer{
     <h2>About Me</h2>
     <div class="about">
         I am an MSc Computer Science graduate passionate about Data Analytics.
-        I specialize in Python, SQL, Excel and Power BI.
-        I build interactive dashboards, analyze KPIs and transform raw data into meaningful business insights.
-        I am actively seeking an opportunity as a Data Analyst to apply my analytical and problem-solving skills.
+        I specialize in Python, SQL, Excel, and Power BI.
+        I build interactive dashboards, analyze KPIs, and transform raw data into meaningful business insights.
+        I am actively seeking an opportunity as a Data Analyst to apply my analytical skills.
     </div>
 </section>
 
@@ -185,21 +199,21 @@ footer{
         <div class="card">
             <h3>COVID-19 Analysis</h3>
             <img src="pictures/projects/project1.png">
-            <p>Python based country-wise data analysis and visualization.</p>
+            <p>Country-wise COVID-19 data analysis using Python & Pandas.</p>
             <a href="https://github.com/reenadeviraman03/CovidAnalysis" target="_blank">View Project</a>
         </div>
 
         <div class="card">
             <h3>Meta Ads Dashboard</h3>
             <img src="pictures/projects/project2.png">
-            <p>Power BI dashboard analyzing campaign KPIs and ROI.</p>
+            <p>Power BI dashboard analyzing Meta Ads KPIs.</p>
             <a href="https://github.com/reenadeviraman03/meta-ads-performance-powerbi" target="_blank">View Project</a>
         </div>
 
         <div class="card">
-            <h3>Sales Dashboard</h3>
+            <h3>Sales Performance</h3>
             <img src="pictures/projects/project3.png">
-            <p>Revenue & profit insights using Power BI.</p>
+            <p>Revenue & profit insights dashboard.</p>
             <a href="https://github.com/reenadeviraman03/sales-performance-dashboard" target="_blank">View Project</a>
         </div>
 
@@ -229,23 +243,6 @@ footer{
     </div>
 </section>
 
-<section>
-    <h2>Certifications</h2>
-    <div class="cards">
-
-        <div class="card">
-            <h3>Data Analysis</h3>
-            <img src="pictures/certificates/data-analysis.png">
-        </div>
-
-        <div class="card">
-            <h3>Python for Data Science</h3>
-            <img src="pictures/certificates/python.png">
-        </div>
-
-    </div>
-</section>
-
 <section class="contact">
     <h2>Contact</h2>
     <p>Email: reenadeviraman03@gmail.com</p>
@@ -259,16 +256,15 @@ footer{
 
 </body>
 </html>
+    
+    
+    
 
 
-
-   
-
-
- 
-
-       
+    
 
 
-       
-  
+    
+
+    
+

@@ -55,15 +55,16 @@ nav ul li a:hover{
 
 /* SECTION */
 section{
-    padding:70px 8%;
+    padding:80px 8%;
 }
 
-/* HOME UPDATED (SIDE LAYOUT) */
+/* HOME */
 .home{
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
+    gap:40px;
 }
 
 .home-text{
@@ -72,23 +73,45 @@ section{
 }
 
 .home-text h1{
-    font-size:40px;
-    margin-bottom:10px;
+    font-size:42px;
+    margin-bottom:15px;
 }
 
 .home-text p{
     color:#ddd;
     line-height:1.6;
+    margin-bottom:20px;
 }
 
 .home img{
-    width:220px;
-    border-radius:50%;
+    width:230px;
+    border-radius:20px;
     border:4px solid #ff4bff;
 }
 
+/* Resume Button */
+.resume-btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#ff4bff;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.resume-btn:hover{
+    background:#fff;
+    color:#ff4bff;
+}
+
 /* SKILLS */
-#skills h2{
+#skills h2,
+#education h2,
+#experience h2,
+#projects h2,
+#certifications h2{
     text-align:center;
     margin-bottom:40px;
 }
@@ -119,23 +142,42 @@ section{
 }
 
 /* EXPERIENCE */
-#experience{
+.experience-card{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
     text-align:center;
 }
 
-.experience-card{
-    background:rgba(255,255,255,0.05);
-    padding:25px;
-    border-radius:15px;
-    border:1px solid rgba(255,255,255,0.1);
-    margin-top:30px;
+.experience-card img{
+    width:350px;
+    max-width:100%;
+    margin-top:20px;
+    border-radius:10px;
 }
 
-.experience-card img{
-    width:300px;
-    max-width:100%;
-    margin-top:15px;
-    border-radius:10px;
+/* EDUCATION (CARD STYLE LIKE IMAGE) */
+.education-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.education-card{
+    background:linear-gradient(145deg,#2b0057,#3c007a);
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    border-left:4px solid #ff4bff;
+}
+
+.education-card h3{
+    margin-bottom:15px;
+}
+
+.education-card p{
+    color:#ddd;
 }
 
 /* PROJECTS */
@@ -143,7 +185,6 @@ section{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
-    margin-top:40px;
 }
 
 .project-card{
@@ -151,12 +192,6 @@ section{
     padding:20px;
     border-radius:15px;
     border:1px solid rgba(255,255,255,0.1);
-    transition:0.3s;
-}
-
-.project-card:hover{
-    box-shadow:0 0 20px #ff4bff;
-    transform:translateY(-5px);
 }
 
 .project-card img{
@@ -167,12 +202,6 @@ section{
 
 .project-card h3{
     color:#ff4bff;
-    margin-bottom:10px;
-}
-
-.project-card p{
-    font-size:14px;
-    color:#ddd;
 }
 
 /* CERTIFICATIONS */
@@ -180,14 +209,12 @@ section{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
-    margin-top:40px;
 }
 
 .certificate-card{
     background:rgba(255,255,255,0.05);
     padding:20px;
     border-radius:15px;
-    border:1px solid rgba(255,255,255,0.1);
 }
 
 .certificate-card img{
@@ -219,7 +246,6 @@ section{
     .home{
         flex-direction:column-reverse;
         text-align:center;
-        gap:20px;
     }
 }
 
@@ -238,19 +264,22 @@ section{
 </ul>
 </nav>
 
-<!-- HOME UPDATED -->
+<!-- HOME -->
 <section id="home" class="home">
 <div class="home-text">
 <h1>Hi, I'm Reena Devi</h1>
 <p>
-I am an aspiring Data Analyst with strong expertise in Excel, SQL, Power BI, and Python. I enjoy working with data — from cleaning and organizing it to creating dashboards that provide clear business insights.
-I have completed multiple real-time analytical projects focused on sales performance, retail analysis, and data reporting. My goal is to help organizations make smarter decisions using structured and well-analyzed data.
+I am an aspiring Data Analyst skilled in Excel, SQL, Power BI and Python.
+I build interactive dashboards and generate business insights from raw data.
 </p>
+
+<a href="resume/Reena_Resume.pdf" class="resume-btn" download>Download Resume</a>
+
 </div>
 <img src="pictures/profile.jpg" alt="Profile Photo">
 </section>
 
-<!-- SKILLS UPDATED -->
+<!-- SKILLS -->
 <section id="skills">
 <h2>Skills</h2>
 <div class="skills-container">
@@ -298,26 +327,36 @@ I have completed multiple real-time analytical projects focused on sales perform
 </div>
 </section>
 
-
-  
-
-
+<!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience</h2>
 <div class="experience-card">
 <h3>Novi Tech Pvt Ltd</h3>
-<p>Data Analyst Intern (Dec 2025 – Dec 2026)</p>
-<p>Worked on data cleaning, SQL queries, KPI analysis and built Power BI dashboards for business performance tracking.</p>
-<img src="pictures/certificates/internship.png" alt="Internship Certificate">
+<p><strong>Data Analyst Intern (DEC 2025 – JAN 2026)</strong></p>
+<p>Worked on data cleaning, SQL queries, KPI analysis and built Power BI dashboards.</p>
+<img src="pictures/certificates/internship.png">
 </div>
 </section>
 
+<<!-- EDUCATION -->
 <section id="education">
-<h2>Education</h2>
-<p><strong>MSc Computer Science</strong> – Mother Terasa Arts and Science 2023-2025)</p>
-<p><strong>Bachelor of Computer Application</strong> – Mother Terasa Arts and Science2020-2023</p>
-</section>
+<h2>Educational Qualifications</h2>
+<div class="education-container">
 
+<div class="education-card">
+<h3>MSc Computer Science</h3>
+<p>Mother Terasa Arts and Science</p>
+<p>2023 – 2025</p>
+</div>
+
+<div class="education-card">
+<h3>Bachelor of Computer Application</h3>
+<p>Mother Terasa Arts and Science</p>
+<p>2020 – 2023</p>
+</div>
+
+</div>
+</section>
 <section id="projects">
 <h2>Projects</h2>
 <div class="projects-container">
@@ -347,7 +386,7 @@ I have completed multiple real-time analytical projects focused on sales perform
 </div>
 
 <div class="project-card">
-<img src="pictures/projects/project5.png">
+<img src="pictures/projects/Project5.png">
 <h3>Blinkit Sales Analysis</h3>
 <p>Cleaned and analyzed sales data using SQL & Power BI.</p>
 </div>
